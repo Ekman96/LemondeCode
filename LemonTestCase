@@ -46,14 +46,19 @@ def test_form_submission():
     
     driver.implicitly_wait(5)
     
-    # Fill in form fields (example: name, email, address)
+    # Fill in form fields (example: name, email,Phone number, Zip Code, address)
     name_field = driver.find_element(By.NAME, "name")
     email_field = driver.find_element(By.NAME, "email")
+    PhoneNumber_field = driver.find_element(By.Name, "Phone Number")
+    ZipCode_field = driver.find_element(By.Name, "Zip Code")
     address_field = driver.find_element(By.NAME, "address")
+    
     
     name_field.send_keys("John Doe")
     email_field.send_keys("john.doe@example.com")
-    address_field.send_keys("1234 Test St")
+    PhoneNumber_field.send_keys("445-656-8956")
+    ZipCode_field.send_keys("56987")
+    address_field.send_keys("333 Clun St")
     
     # Submit the form
     submit_button = driver.find_element(By.XPATH, "//button[@type='submit']")
